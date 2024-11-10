@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiAppHotel.Views.HospedagemContratada"
+             NavigationPage.HasNavigationBar="False">
+
+   
+
+        <VerticalStackLayout VerticalOptions="CenterAndExpand"
+                         Padding="20"
+                         Spacing="15">
+
+            <!-- Título com estilo vibrante e moderno -->
+            <Label Text="Suíte Super Luxo"
+               TextColor="#4CAF50"
+               FontFamily="Poppins"
+               FontSize="42"
+               HorizontalTextAlignment="Center"
+               FontAttributes="Bold"/>
+
+            <!-- Quadro de Adultos e Crianças com borda e sombra -->
+            <Frame Padding="15" BorderColor="#B0B0B0" CornerRadius="12" HasShadow="True" Margin="10">
+                <StackLayout Orientation="Horizontal">
+                    <HorizontalStackLayout HorizontalOptions="CenterAndExpand">
+                        <Label Text="Adultos: " TextColor="#333333"/>
+                        <Label Text="2" TextColor="#333333"/>
+                    </HorizontalStackLayout>
+
+                    <HorizontalStackLayout HorizontalOptions="CenterAndExpand">
+                        <Label Text="Crianças: " TextColor="#333333"/>
+                        <Label Text="1" TextColor="#333333"/>
+                    </HorizontalStackLayout>
+                </StackLayout>
+            </Frame>
+
+            <!-- Seção de Check-in, Check-out e Estadia com borda e sombra -->
+            <Frame Padding="15" BorderColor="#B0B0B0" CornerRadius="12" HasShadow="True" Margin="10">
+                <Grid ColumnDefinitions="*, *, *"
+                  RowDefinitions="Auto, Auto">
+                    <Label Grid.Row="0" Grid.Column="0" Text="Check-in:" TextColor="#333333"/>
+                    <Label Grid.Row="0" Grid.Column="1" Text="Check-out:" TextColor="#333333"/>
+                    <Label Grid.Row="0" Grid.Column="2" Text="Estadia:" TextColor="#333333"/>
+
+                    <Label Grid.Row="1" Grid.Column="0" Text="27/05/2024" TextColor="#333333"/>
+                    <Label Grid.Row="1" Grid.Column="1" Text="30/05/2024" TextColor="#333333"/>
+                    <Label Grid.Row="1" Grid.Column="2" Text="3" TextColor="#333333"/>
+                </Grid>
+            </Frame>
+
+            <!-- Seção de Valor Total com borda e sombra -->
+            <Frame Padding="15" BorderColor="#B0B0B0" CornerRadius="12" HasShadow="True" Margin="10">
+                <HorizontalStackLayout HorizontalOptions="CenterAndExpand">
+                    <Label Text="Valor Total: " TextColor="#333333"/>
+                    <Label Text="R$ 750,00" TextColor="#4CAF50" FontAttributes="Bold"/>
+                </HorizontalStackLayout>
+            </Frame>
+
+            <!-- Botão de Voltar com design modernizado -->
+            <Button Text="Voltar"
+                BackgroundColor="#4CAF50"
+                TextColor="White"
+                FontSize="18"
+                Padding="15"
+                CornerRadius="30"
+                HorizontalOptions="Center"
+                Clicked="Button_Clicked"/>
+
+        </VerticalStackLayout>
+
+
+</ContentPage>
